@@ -197,7 +197,7 @@ export function OnboardingWizard() {
     queryFn: () => agentsApi.adapterModels(createdCompanyId!, adapterType),
     enabled: Boolean(createdCompanyId) && effectiveOnboardingOpen && step === 2
   });
-  const NONLOCAL_TYPES = new Set(["process", "http", "openclaw_gateway", "openai_compatible"]);
+  const NONLOCAL_TYPES = new Set(["process", "http", "openclaw_gateway"]);
   const isLocalAdapter = !NONLOCAL_TYPES.has(adapterType);
 
   // Build adapter grids dynamically from the UI registry + display metadata.

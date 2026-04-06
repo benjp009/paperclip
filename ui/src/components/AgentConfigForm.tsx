@@ -317,7 +317,7 @@ export function AgentConfigForm(props: AgentConfigFormProps) {
   const adapterType = isCreate
     ? props.values.adapterType
     : overlay.adapterType ?? props.agent.adapterType;
-  const NONLOCAL_TYPES = new Set(["process", "http", "openclaw_gateway", "openai_compatible"]);
+  const NONLOCAL_TYPES = new Set(["process", "http", "openclaw_gateway"]);
   const isLocal = !NONLOCAL_TYPES.has(adapterType);
   
   const showLegacyWorkingDirectoryField =
