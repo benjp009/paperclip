@@ -8,6 +8,7 @@ import { printPiStreamEvent } from "@paperclipai/adapter-pi-local/cli";
 import { printOpenClawGatewayStreamEvent } from "@paperclipai/adapter-openclaw-gateway/cli";
 import { processCLIAdapter } from "./process/index.js";
 import { httpCLIAdapter } from "./http/index.js";
+import { openaiCompatibleCLIAdapter } from "./openai-compatible/index.js";
 
 const claudeLocalCLIAdapter: CLIAdapterModule = {
   type: "claude_local",
@@ -55,6 +56,7 @@ const adaptersByType = new Map<string, CLIAdapterModule>(
     openclawGatewayCLIAdapter,
     processCLIAdapter,
     httpCLIAdapter,
+    openaiCompatibleCLIAdapter,
   ].map((a) => [a.type, a]),
 );
 
