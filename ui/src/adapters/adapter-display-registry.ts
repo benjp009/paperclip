@@ -89,6 +89,11 @@ const adapterDisplayMap: Record<string, AdapterDisplayInfo> = {
     description: "Local Cursor agent",
     icon: MousePointer2,
   },
+  openai_compatible: {
+    label: "OpenAI-Compatible API",
+    description: "Free providers: Groq, Cerebras, SambaNova...",
+    icon: Cpu,
+  },
   openclaw_gateway: {
     label: "OpenClaw Gateway",
     description: "Invoke OpenClaw via gateway protocol",
