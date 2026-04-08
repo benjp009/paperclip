@@ -15,7 +15,7 @@ export async function execute(ctx: AdapterExecutionContext): Promise<AdapterExec
 
   const maxTokens = asNumber(config.maxTokens, 4096);
   const temperature = asNumber(config.temperature, 0.7);
-  const timeoutMs = asNumber(config.timeoutSec, 120) * 1000;
+  const timeoutMs = (asNumber(config.timeoutSec, 120) || 120) * 1000;
 
   const prompt = asString(context.paperclipPrompt, "");
   const systemPrompt = asString(
