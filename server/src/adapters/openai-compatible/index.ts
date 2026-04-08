@@ -7,9 +7,15 @@ export const openaiCompatibleAdapter: ServerAdapterModule = {
   execute,
   testEnvironment,
   models: [
+    // Groq production
     { id: "llama-3.3-70b-versatile", label: "Llama 3.3 70B (Groq)" },
-    { id: "gemma2-9b-it", label: "Gemma 2 9B (Groq)" },
-    { id: "qwen-2.5-32b", label: "Qwen 2.5 32B (Groq)" },
+    { id: "llama-3.1-8b-instant", label: "Llama 3.1 8B Instant (Groq)" },
+    { id: "openai/gpt-oss-120b", label: "GPT OSS 120B (Groq)" },
+    { id: "openai/gpt-oss-20b", label: "GPT OSS 20B (Groq)" },
+    // Groq preview
+    { id: "meta-llama/llama-4-scout-17b-16e-instruct", label: "Llama 4 Scout 17B (Groq)" },
+    { id: "qwen/qwen3-32b", label: "Qwen 3 32B (Groq)" },
+    // Cerebras
     { id: "llama-3.3-70b", label: "Llama 3.3 70B (Cerebras)" },
     { id: "qwen-2.5-coder-32b", label: "Qwen 2.5 Coder 32B (Cerebras)" },
   ],
